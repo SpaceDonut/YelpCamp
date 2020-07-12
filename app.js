@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
@@ -46,9 +47,15 @@ app.use((req, res, next) => {
   next();
 });
 
-mongoose.connect("mongodb://localhost:27017/yelp_camp", {
+let atlasUrl = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.CLUSTER_NAME}.ybhwl.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
+// let localUrl = "mongodb://localhost:27017/yelp_camp";
+mongoose.connect( atlasUrl, {
   useNewUrlParser: true,
   useUnifiedTopology: true
+}).then(() => {
+  console.log('Connected to DB!');
+}).catch(err => {
+  console.log('ERROR: ', err.message); 
 });
 
 //  seedDB();
