@@ -1,0 +1,45 @@
+.thumbnail img {
+    width: 100%;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+}
+
+.delete-form {
+    display: inline-block;
+}
+
+/* .hideMe {
+    -moz-animation: cssAnimation 0.7s ease-in-out 5s forwards;
+    /* Firefox */
+    -webkit-animation: cssAnimation 0.7s ease-in-out 5s forwards;
+    /* Safari and Chrome */
+    -o-animation: cssAnimation 0.7s ease-in-out 5s forwards;
+    /* Opera */
+    animation: cssAnimation 0.7s ease-in-out 5s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        overflow:hidden;
+        padding: 0;
+        position: absolute;
+    }
+}
+@-webkit-keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        visibility:hidden;
+        padding: 0;
+        position: absolute;
+    }
+} */
